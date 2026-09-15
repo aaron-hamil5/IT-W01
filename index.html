@@ -52,7 +52,31 @@
 
         <div id="container"></div>
 
-        <!-- ...react script to be added here  -->
+        <script type="text/babel" data-type="module">
+            import React from 'react';
+            import { createRoot } from 'react-dom/client';
+
+            function MyButton() {
+                return (
+                    <button>I'm a button</button>
+                );
+            }
+
+
+            function App() {
+                return (
+                    <div>
+                        <h1>Welcome to my app</h1>
+                        <MyButton />
+                    </div>
+                );
+
+            }
+
+            const container = document.getElementById('container');
+            const root = createRoot(container);
+            root.render(<App />);
+        </script>
 
     </main>
 
