@@ -56,18 +56,16 @@
             import React from 'react';
             import { createRoot } from 'react-dom/client';
 
-            function MyButton() {
-                return (
-                    <button>I'm a button</button>
-                );
+            function Hello() {
+                return ( <h2 className="text-headline-md p-sm">Hello, World!</h2> );
             }
 
 
             function App() {
                 return (
                     <div>
-                        <h1>Welcome to my app</h1>
-                        <MyButton />
+                        <h1 className="text-display-lg font-thin p-sm">Welcome to my app</h1>
+                        <Hello />
                     </div>
                 );
 
