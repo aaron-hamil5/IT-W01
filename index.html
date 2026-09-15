@@ -53,12 +53,16 @@
         <div id="container"></div>
 
         <script type="text/babel" data-type="module">
-            import React from 'react';
+            import React, {useState} from 'react';
             import { createRoot } from 'react-dom/client';
 
-            function MyButton() {
+            function Incrementer() {
+                const [count, setCount] = useState(0);
                 return (
-                    <button>I'm a button</button>
+                    <div>
+                        <p className="text-body-lg p-sm">Count: {count}</p>
+                        <button className="bubble text-body-md p-sm" onClick={() => setCount(count + 1)}>Increment</button>
+                    </div>
                 );
             }
 
@@ -66,8 +70,9 @@
             function App() {
                 return (
                     <div>
-                        <h1>Welcome to my app</h1>
-                        <MyButton />
+                        <h1 className="text-display-lg font-thin p-sm">Welcome to my app</h1>
+                        <h2 className="text-headline-lg p-sm">Basic Counter</h2>
+                        <Incrementer />
                     </div>
                 );
 
