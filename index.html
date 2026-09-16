@@ -49,35 +49,40 @@
     </header>
 
     <main>
-
-        <div id="container"></div>
+        <div id="container1" style="background-color: aliceblue"></div>
+        <div id="container2" style="background-color: azure"></div>
+        <div id="container3" style="background-color: beige"></div>
 
         <script type="text/babel" data-type="module">
             import React from 'react';
             import { createRoot } from 'react-dom/client';
 
-            function MyButton() {
-                return (
-                    <button>I'm a button</button>
-                );
+            function Hello() {
+                return ( <h2 className="text-headline-md p-sm">Hello, World!</h2> );
             }
 
 
             function App() {
                 return (
                     <div>
-                        <h1>Welcome to my app</h1>
-                        <MyButton />
+                        <h1 className="text-display-lg font-thin p-sm">Welcome to my app</h1>
+                        <Hello />
                     </div>
                 );
 
             }
 
-            const container = document.getElementById('container');
-            const root = createRoot(container);
-            root.render(<App />);
-        </script>
+            const container1 = document.getElementById('container1');
+            const root1 = createRoot(container1);
+            const container2 = document.getElementById('container2');
+            const root2 = createRoot(container2);
+            const container3 = document.getElementById('container3');
+            const root3 = createRoot(container3);
 
+            root1.render(<App />);
+            root2.render(<App />);
+            root3.render(<App />);
+        </script>
     </main>
 
     <footer class="footer">
